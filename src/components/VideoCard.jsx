@@ -22,13 +22,13 @@ const VideoCard = ({video: {id:{videoId},snippet}}) => {
         <CardContent sx={{backgroundColor:'#111', height:'102px'}}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
             <Typography variant="subtitle1" fontWeight="bold" color="#f5f5f5">
-                {snippet?.title.slice(0,60) || demoVideoTitle.slice(0,60)}
+                {snippet?.title.slice(0,60) }
                 </Typography>
                 </Link>
 
         <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl}>
             <Typography variant="subtitle2" fontWeight="bold" color="gray">
-                {snippet?.channelTitle.slice(0,60) || demoChannelTitle.slice(0,60)}
+                {snippet?.channelTitle.slice(0,60) }
             </Typography>
         </Link>
         </CardContent>
